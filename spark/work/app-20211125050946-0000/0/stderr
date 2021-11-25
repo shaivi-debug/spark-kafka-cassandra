@@ -1,0 +1,511 @@
+Spark Executor Command: "/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java" "-cp" "/opt/spark/conf/:/opt/spark/jars/*" "-Xmx1024M" "-Dspark.cassandra.connection.port=9042" "-Dspark.driver.port=36929" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929" "--executor-id" "0" "--hostname" "192.168.1.3" "--cores" "2" "--app-id" "app-20211125050946-0000" "--worker-url" "spark://Worker@192.168.1.3:37279"
+========================================
+
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/11/25 05:09:49 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 3368@cassandra-ubuntu-20-04-1-vm
+21/11/25 05:09:49 INFO SignalUtils: Registering signal handler for TERM
+21/11/25 05:09:49 INFO SignalUtils: Registering signal handler for HUP
+21/11/25 05:09:49 INFO SignalUtils: Registering signal handler for INT
+21/11/25 05:09:49 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+21/11/25 05:09:49 INFO SecurityManager: Changing view acls to: shaivishubhi
+21/11/25 05:09:49 INFO SecurityManager: Changing modify acls to: shaivishubhi
+21/11/25 05:09:49 INFO SecurityManager: Changing view acls groups to: 
+21/11/25 05:09:49 INFO SecurityManager: Changing modify acls groups to: 
+21/11/25 05:09:49 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(shaivishubhi); groups with view permissions: Set(); users  with modify permissions: Set(shaivishubhi); groups with modify permissions: Set()
+21/11/25 05:09:50 INFO TransportClientFactory: Successfully created connection to cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal/192.168.1.3:36929 after 180 ms (0 ms spent in bootstraps)
+21/11/25 05:09:51 INFO SecurityManager: Changing view acls to: shaivishubhi
+21/11/25 05:09:51 INFO SecurityManager: Changing modify acls to: shaivishubhi
+21/11/25 05:09:51 INFO SecurityManager: Changing view acls groups to: 
+21/11/25 05:09:51 INFO SecurityManager: Changing modify acls groups to: 
+21/11/25 05:09:51 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(shaivishubhi); groups with view permissions: Set(); users  with modify permissions: Set(shaivishubhi); groups with modify permissions: Set()
+21/11/25 05:09:51 INFO TransportClientFactory: Successfully created connection to cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal/192.168.1.3:36929 after 10 ms (0 ms spent in bootstraps)
+21/11/25 05:09:51 INFO DiskBlockManager: Created local directory at /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/blockmgr-9489bdce-4f44-4f78-a5fe-33f3b5a975b1
+21/11/25 05:09:51 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+21/11/25 05:09:51 INFO WorkerWatcher: Connecting to worker spark://Worker@192.168.1.3:37279
+21/11/25 05:09:51 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929
+21/11/25 05:09:51 INFO ResourceUtils: ==============================================================
+21/11/25 05:09:51 INFO ResourceUtils: No custom resources configured for spark.executor.
+21/11/25 05:09:51 INFO ResourceUtils: ==============================================================
+21/11/25 05:09:52 INFO TransportClientFactory: Successfully created connection to /192.168.1.3:37279 after 57 ms (0 ms spent in bootstraps)
+21/11/25 05:09:52 INFO WorkerWatcher: Successfully connected to spark://Worker@192.168.1.3:37279
+21/11/25 05:09:52 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+21/11/25 05:09:52 INFO Executor: Starting executor ID 0 on host 192.168.1.3
+21/11/25 05:09:52 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37831.
+21/11/25 05:09:52 INFO NettyBlockTransferService: Server created on 192.168.1.3:37831
+21/11/25 05:09:52 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/11/25 05:09:52 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(0, 192.168.1.3, 37831, None)
+21/11/25 05:09:52 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(0, 192.168.1.3, 37831, None)
+21/11/25 05:09:52 INFO BlockManager: Initialized BlockManager: BlockManagerId(0, 192.168.1.3, 37831, None)
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.thoughtworks.paranamer_paranamer-2.8.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO TransportClientFactory: Successfully created connection to cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal/192.168.1.3:36929 after 5 ms (0 ms spent in bootstraps)
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.thoughtworks.paranamer_paranamer-2.8.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp7368823208632965370.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-17770768971637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./com.thoughtworks.paranamer_paranamer-2.8.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.datastax.oss_java-driver-query-builder-4.12.0.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.datastax.oss_java-driver-query-builder-4.12.0.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp563849974999410609.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-9542635221637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./com.datastax.oss_java-driver-query-builder-4.12.0.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.datastax.oss_native-protocol-1.5.0.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.datastax.oss_native-protocol-1.5.0.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp4602378793662580943.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-16936430991637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./com.datastax.oss_native-protocol-1.5.0.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp8624284956120299513.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/4230957581637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.lz4_lz4-java-1.7.1.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.lz4_lz4-java-1.7.1.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp4567838936279518346.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/11617549651637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./org.lz4_lz4-java-1.7.1.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.google.code.findbugs_jsr305-3.0.2.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.google.code.findbugs_jsr305-3.0.2.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp1793941498400743770.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-6117234781637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./com.google.code.findbugs_jsr305-3.0.2.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp8089877950551170743.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-8109294551637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.scala-lang_scala-reflect-2.12.11.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.scala-lang_scala-reflect-2.12.11.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp2654153116587026448.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-17059539011637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./org.scala-lang_scala-reflect-2.12.11.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp5947154964359379896.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/15109251591637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.slf4j_slf4j-api-1.7.30.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp4993879098913664010.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-20741914431637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./org.slf4j_slf4j-api-1.7.30.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.github.spotbugs_spotbugs-annotations-3.1.12.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.github.spotbugs_spotbugs-annotations-3.1.12.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp4143204654447987820.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-5776926571637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./com.github.spotbugs_spotbugs-annotations-3.1.12.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.github.luben_zstd-jni-1.4.8-1.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.github.luben_zstd-jni-1.4.8-1.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp5469928495163668775.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-11379971311637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./com.github.luben_zstd-jni-1.4.8-1.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.apache.commons_commons-lang3-3.10.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.apache.commons_commons-lang3-3.10.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp5567912153203039984.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-14354133871637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./org.apache.commons_commons-lang3-3.10.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp3568233552669804521.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-1701657681637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp7968206860322637691.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/3037636951637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./com.github.stephenc.jcip_jcip-annotations-1.0-1.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.reactivestreams_reactive-streams-1.0.3.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.reactivestreams_reactive-streams-1.0.3.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp8690667133188570486.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-12673154381637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./org.reactivestreams_reactive-streams-1.0.3.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.xerial.snappy_snappy-java-1.1.8.2.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.xerial.snappy_snappy-java-1.1.8.2.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp3224581531021964744.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-8473632691637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./org.xerial.snappy_snappy-java-1.1.8.2.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.hdrhistogram_HdrHistogram-2.1.12.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.hdrhistogram_HdrHistogram-2.1.12.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp2968240800103683386.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-20290243411637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./org.hdrhistogram_HdrHistogram-2.1.12.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.apache.kafka_kafka-clients-2.6.0.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.apache.kafka_kafka-clients-2.6.0.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp7145972156862925548.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/16733350661637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./org.apache.kafka_kafka-clients-2.6.0.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.apache.commons_commons-pool2-2.6.2.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp7496445093371641189.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/14478685261637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./org.apache.commons_commons-pool2-2.6.2.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/io.dropwizard.metrics_metrics-core-4.1.18.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/io.dropwizard.metrics_metrics-core-4.1.18.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp5580060655714089481.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-12187760691637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./io.dropwizard.metrics_metrics-core-4.1.18.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.typesafe_config-1.4.1.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.typesafe_config-1.4.1.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp472764588557505410.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/19543701391637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./com.typesafe_config-1.4.1.jar
+21/11/25 05:09:52 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.datastax.oss_java-driver-core-shaded-4.12.0.jar with timestamp 1637816984292
+21/11/25 05:09:52 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.datastax.oss_java-driver-core-shaded-4.12.0.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp7027125669596443296.tmp
+21/11/25 05:09:52 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-7430508011637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./com.datastax.oss_java-driver-core-shaded-4.12.0.jar
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp4026872555241880184.tmp
+21/11/25 05:09:53 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/17669928981637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp6828972427970239501.tmp
+21/11/25 05:09:53 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-19755430501637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.spark-project.spark_unused-1.0.0.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/files/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp4117102872709738179.tmp
+21/11/25 05:09:53 INFO Utils: Copying /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-13611338161637816984292_cache to /opt/spark/work/app-20211125050946-0000/0/./org.spark-project.spark_unused-1.0.0.jar
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.datastax.oss_native-protocol-1.5.0.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.datastax.oss_native-protocol-1.5.0.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp8990809049564274126.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-3265775721637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./com.datastax.oss_native-protocol-1.5.0.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./com.datastax.oss_native-protocol-1.5.0.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.lz4_lz4-java-1.7.1.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp8419496950189017268.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/11670023801637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./org.lz4_lz4-java-1.7.1.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./org.lz4_lz4-java-1.7.1.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.thoughtworks.paranamer_paranamer-2.8.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.thoughtworks.paranamer_paranamer-2.8.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp7601146134316766541.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/20078692701637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./com.thoughtworks.paranamer_paranamer-2.8.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./com.thoughtworks.paranamer_paranamer-2.8.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.datastax.oss_java-driver-query-builder-4.12.0.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.datastax.oss_java-driver-query-builder-4.12.0.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp4449927313972216662.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/4650874951637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./com.datastax.oss_java-driver-query-builder-4.12.0.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./com.datastax.oss_java-driver-query-builder-4.12.0.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp1354634772104372767.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-17426948561637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./com.github.spotbugs_spotbugs-annotations-3.1.12.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./com.github.spotbugs_spotbugs-annotations-3.1.12.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp6029970197560195425.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/14733043251637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./com.datastax.oss_java-driver-mapper-runtime-4.12.0.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.slf4j_slf4j-api-1.7.30.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp8145317419372650430.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-6993531161637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./org.slf4j_slf4j-api-1.7.30.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./org.slf4j_slf4j-api-1.7.30.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.github.luben_zstd-jni-1.4.8-1.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.github.luben_zstd-jni-1.4.8-1.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp4910557949305892973.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-12443933141637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./com.github.luben_zstd-jni-1.4.8-1.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./com.github.luben_zstd-jni-1.4.8-1.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp3260476113481933951.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-13239571211637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./org.spark-project.spark_unused-1.0.0.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./org.spark-project.spark_unused-1.0.0.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.apache.kafka_kafka-clients-2.6.0.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.apache.kafka_kafka-clients-2.6.0.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp1583695604311024075.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/17105117611637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./org.apache.kafka_kafka-clients-2.6.0.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./org.apache.kafka_kafka-clients-2.6.0.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.google.code.findbugs_jsr305-3.0.2.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.google.code.findbugs_jsr305-3.0.2.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp7197505476310300854.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/5407540671637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./com.google.code.findbugs_jsr305-3.0.2.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./com.google.code.findbugs_jsr305-3.0.2.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp1563467815798994599.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-8612385041637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./com.github.stephenc.jcip_jcip-annotations-1.0-1.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./com.github.stephenc.jcip_jcip-annotations-1.0-1.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.reactivestreams_reactive-streams-1.0.3.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.reactivestreams_reactive-streams-1.0.3.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp8951309555458728337.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-17713486631637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./org.reactivestreams_reactive-streams-1.0.3.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./org.reactivestreams_reactive-streams-1.0.3.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.apache.commons_commons-lang3-3.10.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.apache.commons_commons-lang3-3.10.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp2453884233673148175.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-2829358421637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./org.apache.commons_commons-lang3-3.10.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./org.apache.commons_commons-lang3-3.10.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.apache.commons_commons-pool2-2.6.2.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp6481445943399276060.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-14800332431637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./org.apache.commons_commons-pool2-2.6.2.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./org.apache.commons_commons-pool2-2.6.2.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp8169226227393067335.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/3051142761637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./org.xerial.snappy_snappy-java-1.1.8.2.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./org.xerial.snappy_snappy-java-1.1.8.2.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp5982467062723549016.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/500681531637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./com.datastax.spark_spark-cassandra-connector-driver_2.12-3.1.0.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp7986916444104557879.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/6024995011637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.scala-lang_scala-reflect-2.12.11.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.scala-lang_scala-reflect-2.12.11.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp8529155821175338442.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-16687772061637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./org.scala-lang_scala-reflect-2.12.11.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./org.scala-lang_scala-reflect-2.12.11.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.datastax.oss_java-driver-core-shaded-4.12.0.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.datastax.oss_java-driver-core-shaded-4.12.0.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp7878117703403543691.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-19080530001637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./com.datastax.oss_java-driver-core-shaded-4.12.0.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./com.datastax.oss_java-driver-core-shaded-4.12.0.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp392415110662671409.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/1504381161637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./io.dropwizard.metrics_metrics-core-4.1.18.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./io.dropwizard.metrics_metrics-core-4.1.18.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp1804654489575499489.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/15133184161637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.2.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp556806315349689920.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-19918476461637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./org.hdrhistogram_HdrHistogram-2.1.12.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./org.hdrhistogram_HdrHistogram-2.1.12.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp5466428021505453380.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-4180244541637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./com.datastax.spark_spark-cassandra-connector_2.12-3.1.0.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp579567222096836126.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-19254955691637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.2.jar to class loader
+21/11/25 05:09:53 INFO Executor: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.typesafe_config-1.4.1.jar with timestamp 1637816984292
+21/11/25 05:09:53 INFO Utils: Fetching spark://cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal:36929/jars/com.typesafe_config-1.4.1.jar to /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/fetchFileTemp7457606390640508873.tmp
+21/11/25 05:09:53 INFO Utils: /tmp/spark-b0957f01-0d67-40a1-9e66-51e8c35791d4/executor-0d0aaf42-abb3-402f-82be-9fb15d6506b8/spark-930a0731-6d25-4d58-8ee1-54cf1e130bf5/-6336795481637816984292_cache has been previously copied to /opt/spark/work/app-20211125050946-0000/0/./com.typesafe_config-1.4.1.jar
+21/11/25 05:09:53 INFO Executor: Adding file:/opt/spark/work/app-20211125050946-0000/0/./com.typesafe_config-1.4.1.jar to class loader
+21/11/25 05:14:04 INFO CoarseGrainedExecutorBackend: Got assigned task 0
+21/11/25 05:14:05 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+21/11/25 05:14:05 INFO TorrentBroadcast: Started reading broadcast variable 0 with 1 pieces (estimated total size 4.0 MiB)
+21/11/25 05:14:05 INFO TransportClientFactory: Successfully created connection to cassandra-ubuntu-20-04-1-vm.us-west1-b.c.spark-streaming-326814.internal/192.168.1.3:39953 after 3 ms (0 ms spent in bootstraps)
+21/11/25 05:14:05 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 21.5 KiB, free 366.3 MiB)
+21/11/25 05:14:05 INFO TorrentBroadcast: Reading broadcast variable 0 took 178 ms
+21/11/25 05:14:05 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 62.9 KiB, free 366.2 MiB)
+21/11/25 05:14:09 INFO DefaultMavenCoordinates: DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core-shaded) version 4.12.0
+21/11/25 05:14:10 INFO Native: Unable to load JNR native implementation. This could be normal if JNR is excluded from the classpath
+java.lang.NoClassDefFoundError: jnr/posix/POSIXHandler
+	at com.datastax.oss.driver.internal.core.os.Native$LibcLoader.load(Native.java:42)
+	at com.datastax.oss.driver.internal.core.os.Native.<clinit>(Native.java:59)
+	at com.datastax.oss.driver.internal.core.time.Clock.getInstance(Clock.java:41)
+	at com.datastax.oss.driver.internal.core.time.MonotonicTimestampGenerator.buildClock(MonotonicTimestampGenerator.java:109)
+	at com.datastax.oss.driver.internal.core.time.MonotonicTimestampGenerator.<init>(MonotonicTimestampGenerator.java:43)
+	at com.datastax.oss.driver.internal.core.time.AtomicTimestampGenerator.<init>(AtomicTimestampGenerator.java:52)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.datastax.oss.driver.internal.core.util.Reflection.buildFromConfig(Reflection.java:246)
+	at com.datastax.oss.driver.internal.core.util.Reflection.buildFromConfig(Reflection.java:108)
+	at com.datastax.oss.driver.internal.core.context.DefaultDriverContext.buildTimestampGenerator(DefaultDriverContext.java:370)
+	at com.datastax.oss.driver.internal.core.util.concurrent.LazyReference.get(LazyReference.java:55)
+	at com.datastax.oss.driver.internal.core.context.DefaultDriverContext.getTimestampGenerator(DefaultDriverContext.java:709)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession$SingleThreaded.init(DefaultSession.java:349)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession$SingleThreaded.access$1100(DefaultSession.java:300)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.lambda$init$0(DefaultSession.java:146)
+	at com.datastax.oss.driver.shaded.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at com.datastax.oss.driver.shaded.netty.util.concurrent.PromiseTask.run(PromiseTask.java:106)
+	at com.datastax.oss.driver.shaded.netty.channel.DefaultEventLoop.run(DefaultEventLoop.java:54)
+	at com.datastax.oss.driver.shaded.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at com.datastax.oss.driver.shaded.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at com.datastax.oss.driver.shaded.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: jnr.posix.POSIXHandler
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 25 more
+21/11/25 05:14:10 INFO Clock: Could not access native clock (see debug logs for details), falling back to Java system clock
+21/11/25 05:14:11 INFO CassandraConnector: Connected to Cassandra cluster.
+21/11/25 05:14:12 INFO CodeGenerator: Code generated in 293.7365 ms
+21/11/25 05:14:12 INFO CodeGenerator: Code generated in 58.067293 ms
+21/11/25 05:14:12 INFO CodeGenerator: Code generated in 76.844666 ms
+21/11/25 05:14:12 INFO CodeGenerator: Code generated in 14.934626 ms
+21/11/25 05:14:12 INFO CodeGenerator: Code generated in 38.07932 ms
+21/11/25 05:14:13 INFO CodeGenerator: Code generated in 27.795944 ms
+21/11/25 05:14:13 INFO CodeGenerator: Code generated in 21.037199 ms
+21/11/25 05:14:13 INFO CodeGenerator: Code generated in 19.770362 ms
+21/11/25 05:14:13 INFO CodeGenerator: Code generated in 72.46415 ms
+21/11/25 05:14:13 INFO ConsumerConfig: ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = none
+	bootstrap.servers = [34.127.22.67:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+21/11/25 05:14:13 INFO AppInfoParser: Kafka version: 2.6.0
+21/11/25 05:14:13 INFO AppInfoParser: Kafka commitId: 62abe01bee039651
+21/11/25 05:14:13 INFO AppInfoParser: Kafka startTimeMs: 1637817253527
+21/11/25 05:14:13 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Subscribed to partition(s): logins-0
+21/11/25 05:14:13 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to offset 9 for partition logins-0
+21/11/25 05:14:14 INFO Metadata: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Cluster ID: b08XzC2TSaih1MHCsgMbUw
+21/11/25 05:14:14 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to EARLIEST offset of partition logins-0
+21/11/25 05:14:14 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Resetting offset for partition logins-0 to offset 9.
+21/11/25 05:14:14 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to LATEST offset of partition logins-0
+21/11/25 05:14:14 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Resetting offset for partition logins-0 to offset 11.
+21/11/25 05:14:15 INFO CodeGenerator: Code generated in 11.475369 ms
+21/11/25 05:14:15 INFO CodeGenerator: Code generated in 26.199441 ms
+21/11/25 05:14:15 INFO CodeGenerator: Code generated in 44.479898 ms
+21/11/25 05:14:15 INFO DataWritingSparkTask: Commit authorized for partition 0 (task 0, attempt 0, stage 0.0)
+21/11/25 05:14:15 INFO DataWritingSparkTask: Committed partition 0 (task 0, attempt 0, stage 0.0)
+21/11/25 05:14:15 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1889 bytes result sent to driver
+21/11/25 05:14:16 INFO CoarseGrainedExecutorBackend: Got assigned task 1
+21/11/25 05:14:16 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+21/11/25 05:14:16 INFO TorrentBroadcast: Started reading broadcast variable 1 with 1 pieces (estimated total size 4.0 MiB)
+21/11/25 05:14:16 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 21.5 KiB, free 366.2 MiB)
+21/11/25 05:14:16 INFO TorrentBroadcast: Reading broadcast variable 1 took 16 ms
+21/11/25 05:14:16 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 62.6 KiB, free 366.1 MiB)
+21/11/25 05:14:16 INFO CodeGenerator: Code generated in 91.976843 ms
+21/11/25 05:14:16 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to offset 9 for partition logins-0
+21/11/25 05:14:16 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to EARLIEST offset of partition logins-0
+21/11/25 05:14:17 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Resetting offset for partition logins-0 to offset 9.
+21/11/25 05:14:17 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to LATEST offset of partition logins-0
+21/11/25 05:14:17 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Resetting offset for partition logins-0 to offset 11.
+21/11/25 05:14:17 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1825 bytes result sent to driver
+21/11/25 05:15:00 INFO CoarseGrainedExecutorBackend: Got assigned task 2
+21/11/25 05:15:00 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+21/11/25 05:15:00 INFO TorrentBroadcast: Started reading broadcast variable 2 with 1 pieces (estimated total size 4.0 MiB)
+21/11/25 05:15:00 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 21.5 KiB, free 366.2 MiB)
+21/11/25 05:15:00 INFO TorrentBroadcast: Reading broadcast variable 2 took 51 ms
+21/11/25 05:15:00 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 62.9 KiB, free 366.1 MiB)
+21/11/25 05:15:01 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to offset 11 for partition logins-0
+21/11/25 05:15:01 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to EARLIEST offset of partition logins-0
+21/11/25 05:15:01 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Resetting offset for partition logins-0 to offset 9.
+21/11/25 05:15:01 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to LATEST offset of partition logins-0
+21/11/25 05:15:01 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Resetting offset for partition logins-0 to offset 13.
+21/11/25 05:15:01 INFO DataWritingSparkTask: Commit authorized for partition 0 (task 2, attempt 0, stage 2.0)
+21/11/25 05:15:01 INFO DataWritingSparkTask: Committed partition 0 (task 2, attempt 0, stage 2.0)
+21/11/25 05:15:01 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 1803 bytes result sent to driver
+21/11/25 05:15:01 INFO CoarseGrainedExecutorBackend: Got assigned task 3
+21/11/25 05:15:01 INFO Executor: Running task 0.0 in stage 3.0 (TID 3)
+21/11/25 05:15:01 INFO TorrentBroadcast: Started reading broadcast variable 3 with 1 pieces (estimated total size 4.0 MiB)
+21/11/25 05:15:01 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 21.5 KiB, free 366.1 MiB)
+21/11/25 05:15:01 INFO TorrentBroadcast: Reading broadcast variable 3 took 16 ms
+21/11/25 05:15:01 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 62.6 KiB, free 366.1 MiB)
+21/11/25 05:15:01 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to offset 11 for partition logins-0
+21/11/25 05:15:01 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to EARLIEST offset of partition logins-0
+21/11/25 05:15:02 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Resetting offset for partition logins-0 to offset 9.
+21/11/25 05:15:02 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to LATEST offset of partition logins-0
+21/11/25 05:15:02 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-1, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Resetting offset for partition logins-0 to offset 13.
+21/11/25 05:15:02 INFO Executor: Finished task 0.0 in stage 3.0 (TID 3). 1820 bytes result sent to driver
+21/11/25 06:15:02 INFO CassandraConnector: Disconnected from Cassandra cluster.
+21/11/25 06:16:30 INFO CoarseGrainedExecutorBackend: Got assigned task 4
+21/11/25 06:16:30 INFO Executor: Running task 0.0 in stage 4.0 (TID 4)
+21/11/25 06:16:30 INFO TorrentBroadcast: Started reading broadcast variable 4 with 1 pieces (estimated total size 4.0 MiB)
+21/11/25 06:16:31 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 21.5 KiB, free 366.3 MiB)
+21/11/25 06:16:31 INFO TorrentBroadcast: Reading broadcast variable 4 took 15 ms
+21/11/25 06:16:31 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 62.9 KiB, free 366.2 MiB)
+21/11/25 06:16:31 INFO Clock: Could not access native clock (see debug logs for details), falling back to Java system clock
+21/11/25 06:16:31 INFO CassandraConnector: Connected to Cassandra cluster.
+21/11/25 06:16:31 INFO ConsumerConfig: ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = none
+	bootstrap.servers = [34.127.22.67:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+21/11/25 06:16:31 INFO AppInfoParser: Kafka version: 2.6.0
+21/11/25 06:16:31 INFO AppInfoParser: Kafka commitId: 62abe01bee039651
+21/11/25 06:16:31 INFO AppInfoParser: Kafka startTimeMs: 1637820991334
+21/11/25 06:16:31 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-2, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Subscribed to partition(s): logins-0
+21/11/25 06:16:31 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-2, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to offset 13 for partition logins-0
+21/11/25 06:16:31 INFO Metadata: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-2, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Cluster ID: b08XzC2TSaih1MHCsgMbUw
+21/11/25 06:16:31 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-2, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to EARLIEST offset of partition logins-0
+21/11/25 06:16:31 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-2, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Resetting offset for partition logins-0 to offset 9.
+21/11/25 06:16:31 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-2, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to LATEST offset of partition logins-0
+21/11/25 06:16:31 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-2, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Resetting offset for partition logins-0 to offset 14.
+21/11/25 06:16:31 INFO DataWritingSparkTask: Commit authorized for partition 0 (task 4, attempt 0, stage 4.0)
+21/11/25 06:16:31 INFO DataWritingSparkTask: Committed partition 0 (task 4, attempt 0, stage 4.0)
+21/11/25 06:16:31 INFO Executor: Finished task 0.0 in stage 4.0 (TID 4). 1803 bytes result sent to driver
+21/11/25 06:16:32 INFO CoarseGrainedExecutorBackend: Got assigned task 5
+21/11/25 06:16:32 INFO Executor: Running task 0.0 in stage 5.0 (TID 5)
+21/11/25 06:16:32 INFO TorrentBroadcast: Started reading broadcast variable 5 with 1 pieces (estimated total size 4.0 MiB)
+21/11/25 06:16:32 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 21.5 KiB, free 366.2 MiB)
+21/11/25 06:16:32 INFO TorrentBroadcast: Reading broadcast variable 5 took 18 ms
+21/11/25 06:16:32 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 62.6 KiB, free 366.1 MiB)
+21/11/25 06:16:32 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-2, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to offset 13 for partition logins-0
+21/11/25 06:16:32 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-2, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to EARLIEST offset of partition logins-0
+21/11/25 06:16:32 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-2, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Resetting offset for partition logins-0 to offset 9.
+21/11/25 06:16:32 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-2, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Seeking to LATEST offset of partition logins-0
+21/11/25 06:16:32 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor-2, groupId=spark-kafka-source-abdb4527-874a-41f6-a3e1-ec30add31721-1995400139-executor] Resetting offset for partition logins-0 to offset 14.
+21/11/25 06:16:32 INFO Executor: Finished task 0.0 in stage 5.0 (TID 5). 1820 bytes result sent to driver
+21/11/25 06:31:34 ERROR CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+21/11/25 06:31:34 INFO CoarseGrainedExecutorBackend: Driver commanded a shu
